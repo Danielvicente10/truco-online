@@ -6,7 +6,8 @@ import { faClover } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [trucoValue, setTrucoValue] = useState(3); // começa no 3
+  const [trucoValue, setTrucoValue] = useState(3);
+  const [background, setBackground] = useState<string | null>(null);
 
   function handleClickTruco() {
     setTrucoValue((prev) => {
@@ -17,9 +18,17 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <div className="flex justify-center items-center bg-indigo-200 flex-col relative h-full">
-        <div className="w-full flex h-full">
+      <NavBar onBackgroundChange={setBackground} />
+
+      <div
+        className="flex justify-center items-center flex-col relative h-full w-full"
+        style={{
+          background: background
+            ? `url(${background}) center/cover no-repeat`
+            : `linear-gradient(45deg, #1e3c72, #2a5298) `,
+        }}
+      >
+        <div className="relative w-full flex h-full">
           <TeamCounter initialName="Time 1" trucoValue={trucoValue} />
           <TeamCounter initialName="Time 2" trucoValue={trucoValue} />
         </div>
