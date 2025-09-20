@@ -15,17 +15,19 @@ function App() {
       return prev + 3;
     });
   }
+  console.log(background);
 
   return (
     <>
       <NavBar onBackgroundChange={setBackground} />
 
       <div
-        className="flex justify-center items-center flex-col relative h-full w-full"
+        className="flex justify-center items-center flex-col relative h-full w-full overflow-hidden"
         style={{
-          background: background
-            ? `url(${background}) center/cover no-repeat`
-            : `linear-gradient(45deg, #1e3c72, #2a5298) `,
+          background:
+            background === "bg-black"
+              ? `#000`
+              : `url(${background}) center/cover no-repeat`,
         }}
       >
         <div className="relative w-full flex h-full">

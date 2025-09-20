@@ -15,7 +15,7 @@ function TeamCounter({
   }
 
   return (
-    <div className="w-1/2 h-full flex flex-col justify-center items-center gap-4 p-5 rounded-md bg-[#00000087]">
+    <div className="w-1/2 h-full flex flex-col justify-center items-center gap-4 p-5  bg-[#00000087]">
       <input
         className="flex gap-5 items-center focus:outline-none text-3xl font-bebas text-center text-white drop-shadow-md bg-transparent"
         onChange={(e) => setTeamName(e.target.value)}

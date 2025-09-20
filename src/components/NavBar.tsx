@@ -61,27 +61,36 @@ export default function NavBar({ onBackgroundChange }: NavBarProps) {
                 src={img1}
                 onClick={() => handlerBackground(img1)}
                 className="cursor-pointer rounded"
+                loading="lazy"
               />
               <img
                 src={img2}
                 onClick={() => handlerBackground(img2)}
                 className="cursor-pointer rounded"
+                loading="lazy"
               />
               <img
                 src={img3}
                 onClick={() => handlerBackground(img3)}
                 className="cursor-pointer rounded"
+                loading="lazy"
               />
               <img
                 src={img4}
                 onClick={() => handlerBackground(img4)}
                 className="cursor-pointer rounded"
+                loading="lazy"
               />
               <img
                 src={img5}
                 onClick={() => handlerBackground(img5)}
                 className="cursor-pointer rounded"
+                loading="lazy"
               />
+              <div
+                className="bg-black"
+                onClick={() => handlerBackground("bg-black")}
+              ></div>
             </div>
 
             <button
