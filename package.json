@@ -1,5 +1,6 @@
 {
-  "name": "my-project",
+  "homepage": "https://github.com/Danielvicente10/truco-online",
+  "name": "truco-online",
   "private": true,
   "version": "0.0.0",
   "type": "module",
